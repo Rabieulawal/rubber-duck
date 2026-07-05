@@ -3,140 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rubber Duck Settings ⚙️</title>
+    <script src="app.js" defer></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>settings</title>
 </head>
 <body>
-    <div class="app-container">
-        <!-- Settings Header -->
-        <header class="app-header">
-            <div class="header-left">
-                <a href="index.html" class="back-link-btn" title="Back to Chat">
-                    <img src="images/backBtn.png" alt="Back" class="back-btn-img">
-                </a>
-                <div class="header-info">
-                    <h1>Settings</h1>
-                    <p>Customize your debugging buddy</p>
-                </div>
-            </div>
-        </header>
+    <h1>settings</h1>
+    <P id="isapiset"></P>
 
-        <!-- Settings Content -->
-        <main class="settings-area">
-            <section class="settings-group">
-                <h2 class="settings-group-title">Visual Theme</h2>
-                <div class="theme-options">
-                    <button class="theme-btn active" data-theme="yellow" style="--btn-color: #FFD23F;">
-                        <span class="theme-color-preview"></span>
-                        <span class="theme-btn-label">Yellow Duck</span>
-                    </button>
-                    <button class="theme-btn" data-theme="dark" style="--btn-color: #1a1e29;">
-                        <span class="theme-color-preview"></span>
-                        <span class="theme-btn-label">Midnight Dark</span>
-                    </button>
-                    <button class="theme-btn" data-theme="glass" style="--btn-color: #e2e8f0;">
-                        <span class="theme-color-preview"></span>
-                        <span class="theme-btn-label">Frosted Glass</span>
-                    </button>
-                </div>
-            </section>
+    <input type="text" placeholder="enter your api key" id="apiKey">
+    <input type="button" id="apiBtn" value="save api key">
 
-            <section class="settings-group">
-                <h2 class="settings-group-title">Duck Personality</h2>
-                <div class="personality-options">
-                    <label class="radio-card">
-                        <input type="radio" name="personality" value="classic" checked>
-                        <div class="radio-card-content">
-                            <span class="radio-emoji">🦆</span>
-                            <div class="radio-info">
-                                <span class="radio-title">Classic Debugger</span>
-                                <p class="radio-desc">Asks helpful questions to lead you to the solution yourself.</p>
-                            </div>
-                        </div>
-                    </label>
+    <p>your api key is stored locally</p>
 
-                    <label class="radio-card">
-                        <input type="radio" name="personality" value="senior">
-                        <div class="radio-card-content">
-                            <span class="radio-emoji">👓</span>
-                            <div class="radio-info">
-                                <span class="radio-title">Senior Architect</span>
-                                <p class="radio-desc">Very technical, highly skeptical, and points out architectural flaws.</p>
-                            </div>
-                        </div>
-                    </label>
+    <input type="text" placeholder="model name" id="modelBox">
+    <input type="button" id="modelBtn" value="update model">
+    <p>defualt model is claude sonnet 4.5. plz double check the name you get from hcai</p>
 
-                    <label class="radio-card">
-                        <input type="radio" name="personality" value="cheerleader">
-                        <div class="radio-card-content">
-                            <span class="radio-emoji">✨</span>
-                            <div class="radio-info">
-                                <span class="radio-title">Cheerleader Duck</span>
-                                <p class="radio-desc">Highly motivational, hyper-supportive, and keeps your spirits high.</p>
-                            </div>
-                        </div>
-                    </label>
+    <div>
 
-                    <label class="radio-card">
-                        <input type="radio" name="personality" value="sarcastic">
-                        <div class="radio-card-content">
-                            <span class="radio-emoji">😏</span>
-                            <div class="radio-info">
-                                <span class="radio-title">Sarcastic Duck</span>
-                                <p class="radio-desc">Gives witty, slightly sassy feedback about your coding struggles.</p>
-                            </div>
-                        </div>
-                    </label>
-                </div>
-            </section>
-
-            <section class="settings-group">
-                <h2 class="settings-group-title">Preferences</h2>
-                
-                <div class="toggle-control">
-                    <div class="toggle-info">
-                        <span class="toggle-title">Duck Sound Effects</span>
-                        <p class="toggle-desc">Synthesize a cute "quack" sound every time the duck replies</p>
-                    </div>
-                    <label class="switch">
-                        <input type="checkbox" id="sound-switch" checked>
-                        <span class="slider"></span>
-                    </label>
-                </div>
-
-                <div class="toggle-control">
-                    <div class="toggle-info">
-                        <span class="toggle-title">Keyboard Sound Effects</span>
-                        <p class="toggle-desc">Play typing clicking sounds when using virtual keyboard</p>
-                    </div>
-                    <label class="switch">
-                        <input type="checkbox" id="kb-sound-switch" checked>
-                        <span class="slider"></span>
-                    </label>
-                </div>
-
-                <div class="toggle-control">
-                    <div class="toggle-info">
-                        <span class="toggle-title">On-screen Keyboard Default</span>
-                        <p class="toggle-desc">Automatically show virtual keyboard on the main screen</p>
-                    </div>
-                    <label class="switch">
-                        <input type="checkbox" id="keyboard-switch">
-                        <span class="slider"></span>
-                    </label>
-                </div>
-            </section>
-
-            <section class="settings-group about-duck">
-                <h3>About Rubber Duck Debugging 📚</h3>
-                <p>Rubber duck debugging is a method of debugging code. By explaining your code, line-by-line, to an inanimate object (like a rubber duck), you will often find that the process of detailing the problem aloud triggers the solution in your mind without needing external help!</p>
-            </section>
-        </main>
+        <a href="index.html"><img src="images/backBtn.png" alt="back"></a>        
     </div>
-
-    <script src="app.js"></script>
 </body>
 </html>
