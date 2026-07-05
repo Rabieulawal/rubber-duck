@@ -1,8 +1,13 @@
 const API_PORT = 3001;
-const ENDPOINT =
-    window.location.port === String(API_PORT)
-        ? "/api/chat"
-        : `http://localhost:${API_PORT}/api/chat`;
+const isLocalLiveServer =
+    (window.location.hostname === "localhost" ||
+        window.location.hostname === "127.0.0.1") &&
+    window.location.port !== "" &&
+    window.location.port !== String(API_PORT);
+
+const ENDPOINT = isLocalLiveServer
+    ? `http://localhost:${API_PORT}/api/chat`
+    : "/api/chat";
 
 const msgDisplay = document.getElementById("msgdisplay");
 const userInput = document.getElementById("userInput");
