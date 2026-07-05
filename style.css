@@ -122,9 +122,8 @@ body {
     background-color: #0062cc;
 }
 
-#sendbtn .material-symbols-outlined {
-    font-size: 24px;
-    line-height: 1;
+.send-btn .send-icon,
+#sendbtn .send-icon {
     display: block;
 }
 
