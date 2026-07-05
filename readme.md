@@ -2,6 +2,9 @@
 
 so for programming thare is this classic thing that if you have an error you should talk to a rubber duck and explain each line of your code and most of the time you find out where the problem is. this app is just a ai verson of the classic thing, it will help you find the bugs but not tell you dirictly which will help you learn better 
 
+<img width="720" height="440" alt="image" src="https://github.com/user-attachments/assets/22c2df32-8683-4a71-b5c3-c98693cc82a9" />
+
+
 ## languages used
 
 i planed to use normal html css and js but i could not make the api work so i had to add a node.js backend which i did ynot like but you gotta do what you gotta do.
